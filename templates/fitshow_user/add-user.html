@@ -1,0 +1,86 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساخت حساب عضو</title>
+    <!-- links style css -->
+    <link rel="stylesheet" href="{% static 'css/styleCreate.css' %}">
+    <!-- boot strap 5  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- cdn fonawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css ">
+</head>
+<body>
+    <div id="contener">
+        <div class="login-box">
+            <h2>ثبت نام
+              <i class="fa-solid fa-user"></i>
+            </h2>
+            <form method="post">
+                {% csrf_token %}
+              <div class="user-box">
+                  {{ form.firstname }}
+                <label>نام</label>
+                  {% for error in form.firstname.errors %}
+                        <p style="color:red;">{{ error }}</p>
+                  {% endfor %}
+              </div>
+              <div class="user-box">
+                {{ form.lastname }}
+                <label>نام خانوادگی</label>
+                    {% for error in form.lastname.errors %}
+                        <p style="color:red;">{{ error }}</p>
+                  {% endfor %}
+              </div>
+
+              <div class="user-box">
+                {{ form.age }}
+                <label>سن</label>
+                    {% for error in form.age.errors %}
+                        <p style="color:red;">{{ error }}</p>
+                  {% endfor %}
+              </div>
+              <div class="user-box">
+                {{ form.mobile }}
+                <label>شماره</label>
+                    {% for error in form.mobile.errors %}
+                        <p style="color:red;">{{ error }}</p>
+                  {% endfor %}
+              </div>
+              <div class="user-box">
+                {{ form.national_code }}
+                <label>کد ملی</label>
+                    {% for error in form.national_code.errors %}
+                        <p style="color:red;">{{ error }}</p>
+                  {% endfor %}
+              </div>
+                <div class="user-box">
+                {{ form.category_course|as_crispy_field  }}
+                </div>
+              {% for error in form.category_course.errors %}
+                        <p style="color:red;">{{ error }}</p>
+                  {% endfor %}
+              <br>
+              <div class="user-box">
+                    {{ form.course_duration|as_crispy_field }}
+                    {% for error in form.course_duration.errors %}
+                        <p style="color:red;">{{ error }}</p>
+                  {% endfor %}
+                  <input type="date">
+              </div>
+              <button type="submit">
+               ایجاد
+              </button>
+            </form>
+          </div>
+   
+
+
+<!-- links js -->
+    <script src="{% static 'jsCreari-Add.js' %}"></script>
+</body>
+</html>

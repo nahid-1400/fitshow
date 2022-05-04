@@ -1,25 +1,115 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت</title>
+    <link rel="stylesheet" href="{% static 'css/styleControlPanel.css' %}">
+    <!-- cdn foont awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-<a href="{% url  'home'%}">home</a>
-{% if user.is_authenticated %}
-<a href="{% url 'users:add-user' %}">add user</a>
-<a href="{% url  'users:logout'%}">logout</a>
-{% else %}
-<a href="{% url  'users:login'%}">login</a>
-{% endif %}
-<br>
 
-{% for user in object_list %}
-    {% if user.day_to_end_course > 0 %}
-    <a style="color: green;" href="{% url 'users:user-info' user.id %}">{{ user.username }}</a> <a href="{% url 'users:remove-user' user.id %}">remover user</a><br>
+
+<html>
+<!--
+Background
+--->
+<div class="video-bg">
+    <video autoplay loop muted>
+        <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+<div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox">
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+        <a href="{% url 'users:add-user' %}">
+            <li>اضافه کردن عضو</li>
+        </a>
+        <a href="#">
+            <li>تاریخ وساخت</li>
+        </a>
+        <a href="#">
+            <li>اعضای فعال</li>
+        </a>
+        <a href="#">
+            <li>اعضای اتمام شده</li>
+        </a>
+        <a href="#">
+            <li>امار کلی</li>
+        </a>
+        <a href="{% url 'users:logout' %}">
+            <li>خروج</li>
+        </a>
+    </ul>
+</div>
+
+<div class="app">
+    <div class="header">
+
+        <div class="overlay-app"></div>
+        <form action="{% url 'users:dashboard' %}" class="search">
+            <input type="text" placeholder="Search" id="search-00" name="q" value="{{ request.GET.q }}">
+        </form>
+    </div>
+    {% if object_list.count > 0 %}
+        <div id="div-x">
+            {% for user in object_list %}
+                <div id="continer-user">
+                    <div id="continer-i" ><i  class="fa-solid fa-user" id="i-user"></i></div>
+                    <div id="neme-lname">
+                        <div id="contint-Lname-user" class="contint-name-user-class"><a
+                               href="{% url 'users:user-info' user.id %}" class="Lname-uder-text">{{ user.lastname }}</a></div>
+                        <div id="contint-name-user" class="contint-name-user-class"><a
+                              href="{% url 'users:user-info' user.id %}"  class="name-uder-text">{{ user.firstname }}</a></div>
+                    </div>
+
+                    <div id="Month"><span>  روزه {{ user.course_duration }} </span></div>
+
+                    <div id="Day-continer">
+                        <div id="contint-Day-user" class="contint-Day-user-class"><span
+                                class="Day-uder-text">{{ user.day_to_end_course }}</span></div>
+                        <div class="contint-Day-user-class"><span class="Day-uder-text">روز مانده</span></div>
+                    </div>
+                    <form action="{% url 'users:remove-user' user.id %}">
+                        <button type="submit" id="delet-btn">حذف</button>
+                    </form>
+
+                </div>
+            {% endfor %}
+        </div>
     {% else %}
-    <a style="color: red;" href="{% url 'users:user-info' user.id %}">{{ user.username }}</a> <a href="{% url 'users:remove-user' user.id %}">remover user</a><br>
+        <p>کاربری یافت نشد</p>
+        <a href="{% url 'users:add-user' %}">افزودن  کاربر</a>
     {% endif %}
-{% endfor %}
+    <!--  -->
+    <!--  -->
+
+
+</html>
+
 </body>
 </html>
