@@ -58,8 +58,11 @@ Background
         <a href="#">
             <li>اعضای اتمام شده</li>
         </a>
-        <a href="#">
+        <a>
             <li>امار کلی</li>
+        </a>
+        <a href="{% url 'home' %}">
+            <li>نمایش سایت</li>
         </a>
         <a href="{% url 'users:logout' %}">
             <li>خروج</li>
@@ -68,16 +71,16 @@ Background
 </div>
 
 <div class="app">
-    <div class="header">
-
-        <div class="overlay-app"></div>
         <form action="{% url 'users:dashboard' %}" class="search">
+    <div class="header">
+        <div class="overlay-app"></div>
             <input type="text" placeholder="Search" id="search-00" name="q" value="{{ request.GET.q }}">
-        </form>
-    </div>
+        </div>
+    </form>
+
     {% if object_list.count > 0 %}
+                {% for user in object_list %}
         <div id="div-x">
-            {% for user in object_list %}
                 <div id="continer-user">
                     <div id="continer-i" ><i  class="fa-solid fa-user" id="i-user"></i></div>
                     <div id="neme-lname">
@@ -99,8 +102,8 @@ Background
                     </form>
 
                 </div>
-            {% endfor %}
         </div>
+                    {% endfor %}
     {% else %}
         <p>کاربری یافت نشد</p>
         <a href="{% url 'users:add-user' %}">افزودن  کاربر</a>
