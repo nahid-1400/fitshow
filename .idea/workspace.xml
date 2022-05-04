@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c6318f2-b216-45d7-9c84-5a6dd75b24cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fitshow_user/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fitshow_user/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/fitshow_user/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fitshow_user/user-info.html" afterDir="false" />
-    </list>
+    <list default="true" id="9c6318f2-b216-45d7-9c84-5a6dd75b24cf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +102,7 @@
       <workItem from="1651638546045" duration="6151000" />
       <workItem from="1651659883133" duration="1680000" />
       <workItem from="1651661674237" duration="11029000" />
-      <workItem from="1651676987049" duration="5915000" />
+      <workItem from="1651676987049" duration="6533000" />
     </task>
     <task id="LOCAL-00001" summary="add them to project">
       <created>1651679755655</created>
