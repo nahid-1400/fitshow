@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c6318f2-b216-45d7-9c84-5a6dd75b24cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitshow_user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fitshow_user/add_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fitshow_user/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fitshow_user/login_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitshow_user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fitshow_user/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fitshow_user/user_informations.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitshow/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitshow/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitshow_user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitshow_user/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitshow_user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitshow_user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitshow_user/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitshow_user/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitshow_user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitshow_user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fitshow_user/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fitshow/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fitshow_user" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nahid\PycharmProjects\fitshow\fitshow_user" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nahid\PycharmProjects\fitshow\templates\fitshow" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="fitshow" type="Python.DjangoServer" factoryName="Django server">
@@ -86,7 +95,8 @@
       <workItem from="1651573021364" duration="2352000" />
       <workItem from="1651580718108" duration="2516000" />
       <workItem from="1651588501967" duration="8188000" />
-      <workItem from="1651597613623" duration="766000" />
+      <workItem from="1651597613623" duration="1109000" />
+      <workItem from="1651638546045" duration="4219000" />
     </task>
     <servers />
   </component>

@@ -34,7 +34,7 @@ class User(AbstractUser):
     course_duration = models.CharField(choices=course_duration_choices, max_length=3, blank=True, null=True, default=None, verbose_name='مدت زمان دوره')
     course_validity_up_to_date = models.DateTimeField(default=timezone.now(), verbose_name='اعتبار دوره تا تاریخ')
 
-    #  اپدیت روز های زمان دوره
+    #  اپدیت تاریخ پایان دوره
     def course_validity_up_to_date_update(self):
         return self.course_validity_up_to_date + datetime.timedelta(days=int(self.course_duration))
 
