@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  font-weight: bold;
+}
 #continer{
     position: absolute;
     top: 5%;
@@ -41,26 +45,29 @@
     
 }
 #neme-lname{
-    border: solid 1px blue;
+    border: solid 1px rgb(0, 0, 0);
     display: inline-block;
     position: absolute;
     top: 16px;
     left: 56px;
+    padding: 5px;
 }
 #Month{
     display: inline-block;
     margin: 0px 10px;
-    border: solid 1px rgb(126, 126, 211);
+    border: solid 1px rgb(0, 0, 0);
     position: absolute;
-    left: 123px;
+    left: 133px;
     top: 16px;
+    padding: 5px;
 }
 #Day-continer{
-    border: solid 1px rgb(167, 170, 10);
+    border: solid 1px rgb(7, 7, 0);
     display: inline-block;
     position: absolute;
-    left: 192px;
+    left: 222px;
     top: 16px;
+    padding: 5px;
 }
 .contint-Day-user-class{
     display: inline-block;
@@ -73,6 +80,9 @@
     top: 2px;
     right: 2px;
     transition: all 0.4s ease;
+    background: #3f51b5;
+    border: none;
+    border-radius: 5px;
 }
 #delet-btn:hover{
   background: rgb(223, 2, 2);
@@ -86,16 +96,6 @@
 
 /* nav stayle */
 
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
 
  body
  {
@@ -1089,7 +1089,7 @@
 
 #div-x{
   color: var(--content-title-color);
-  width: 30%;
+  width: 34%;
   height: 98px;
   border-radius: 14px;
   border: 1px solid var(--theme-bg-color);
@@ -1102,3 +1102,19 @@
   background-color: rgb(0 0 0 / 50%);  
 }
 /* new part2 */
+.non-user{
+  color: red;
+  text-align:center;
+  padding-top: 1%;
+}
+.animated{
+  width: 250px;
+  margin: 0px auto;
+}
+#non-user-a{
+  color: #e91e63;
+  text-align:center;
+  padding-top: 4%;
+  font-size: 20px;
+  font-weight: bold;
+}
